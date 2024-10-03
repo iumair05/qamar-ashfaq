@@ -10,7 +10,7 @@ const ProductDetail = ({ params }) => {
 
     const { projectId } = params;
     
-    const project = projectsData?.find((p) => p.id === projectId);
+    const project = projectsData?.find((p) => p.id === Number(projectId));
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [selectedImg, setSelectedImg] = useState(project?.images[0]);
